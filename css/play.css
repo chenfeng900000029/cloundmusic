@@ -26,6 +26,7 @@ box-sizing: border-box;}
 	height: 100vh;
 	}
 
+
 .disc-song-wrapper{ display: flex;
 flex-direction: column;
 height: 79vh;
@@ -48,19 +49,21 @@ z-index: 1;
 	margin-top:10vh;
 	
 }		
-.disc > .ring,.disc>.cover{
+.disc .ring,.disc .cover{
 	width: 8.2rem;
 	position: absolute;
 }	
 
-.disc>.light{
-	animation: cirle 20s linear infinite;
+.disc .light{
+	
 	width: 8.2rem;
 }	
-.disc>.cover{width: 5.2rem;
+.disc .cover{width: 5.2rem;
 border-radius: 50%;
-animation: cirle 20s linear infinite;
+
 }
+.disc.playing .cover,.disc.playing .light{ animation: cirle 20s linear infinite;}
+
 
 .song-description{
 display: flex;
@@ -127,9 +130,20 @@ height: 4vh;
  font-size:0.8rem;
  margin-bottom: 2vh;
  }
-  .musiccontrol span:nth-child(3){ font-size: 1.6rem;
-  margin-top: -14px;}
+ 
+.btn-play{
+	font-size: 1.6rem;
+	margin-top: -2.5vh;
+	
+}	
+.btn-stop{
+	font-size: 1.6rem;
+	margin-top: -2.5vh;
+	display: none;
+}	
   
+.musiccontrol.playing .btn-play{display: none;}
+.musiccontrol.playing .btn-stop{display: block;}
   .lyric{
   display: none;
   overflow: hidden;
