@@ -48,3 +48,18 @@ $(lyrics).on('click',function(){
 	$(contaiter).show()
 	$(lyrics).hide()
 })
+
+
+//  topcroll
+
+	window.onscroll=function(x){
+		var scrollHeight=window.scrollY
+			
+			if (scrollHeight>15) {
+				topNavBar.classList.add('addbar')
+			} else{
+				topNavBar.classList.remove('addbar')
+			}
+			//console.log(window.scrollY)	
+		}
+		

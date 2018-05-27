@@ -9,7 +9,8 @@ box-sizing: border-box;}
        overflow: hidden;
     }
 
-
+a{ text-decoration: none;
+outline: none;}
 @keyframes cirle{
 	from{transform: rotate(0deg);}
 	to{

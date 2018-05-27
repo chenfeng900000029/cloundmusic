@@ -3,6 +3,11 @@ padding: 0;
 box-sizing: border-box;}
 ol,ul{ list-style-type: none;}
 *::before, *::after{ box-sizing: border-box;}
+a{ text-decoration: none;
+outline: none;
+color: inherit;}
+
+body{ font-family: "黑体";}
  .icon {
        width: 1em; height: 1em;
        vertical-align: -0.15em;
@@ -12,15 +17,19 @@ ol,ul{ list-style-type: none;}
     
 .siteNav{ height: 23vh;
 background: #1c1b20;}
-.siteNav > ol{ display: flex;
-flex-direction: row;
-justify-content: space-between;
-text-align: center;
-line-height: 1rem;
+.siteNav > ol{ width: 10rem;
+line-height: 1.2rem;
+position: fixed;
+align-items:center;
+display: flex;
+background: #1c1b20;
+
+z-index: 1;
 }
 .siteNav > ol > li{ flex: 1;
 font-size: 0.4rem;
 color: #FFFFFF;
+text-align: center;
 }
 .siteNav > ol > li.active>span{ position: relative;
 font-weight: 600;}
@@ -49,25 +58,25 @@ justify-content:space-around;
 padding-bottom: .5rem;
 border-bottom: 1px solid #DEDEDE;
 }
-.navBar > ul > li{ 
+.navBar > ul > a > li{ 
 font-size: 0.35rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
 text-align: center;
 }
-.navBar > ul > li> span>svg{font-size: 0.65rem;
+.navBar > ul > a > li> span>svg{font-size: 0.65rem;
 fill: #ED584B;}
-.navBar > ul > li> span{ margin: 0 auto;
+.navBar > ul > a > li> span{ margin: 0 auto;
 }
-.navBar > ul > li> span:nth-child(1){width: 1.35rem;
+.navBar > ul > a > li> span:nth-child(1){width: 1.35rem;
 height: 1.35rem;
 border: 1px solid #ED584B;
 border-radius:1rem ;
 padding-top: 0.3rem;
 margin-top: .5rem
  }
- .navBar > ul > li> span:nth-child(2){
+ .navBar > ul > a > li> span:nth-child(2){
  	margin-top: 0.1rem;
  }
 .recomsong{}
