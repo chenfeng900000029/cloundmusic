@@ -81,7 +81,10 @@ font-size: 28px;
 .song-description span:nth-child(2){display: block;
 font-size: 24px;
  }
- 
+.p-m-wrapper{ display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 21vh;}
  .progressbar{
  display: flex;
 flex-direction: row;
@@ -155,8 +158,5 @@ height: 4vh;
   text-align: center;
   color: #dedede;
   line-height: 24px;}
-  .p-m-wrapper{ display:flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 21vh;}
+
   
