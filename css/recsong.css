@@ -48,7 +48,7 @@ opacity: .8;}
 	color: #333;
 }
 .rec-song-list > div:nth-child(1) > span{border-bottom: 0.01rem solid #D3D3D3; }
-.rec-song-list > div:nth-child(1) > span:nth-child(1){font-size: .45rem; flex: 1; margin-left: 0.35rem;}
+.rec-song-list > div:nth-child(1) > span:nth-child(1){font-size: .45rem; flex: 1; }
 .rec-song-list > div:nth-child(1) > span{line-height: 1.4rem;
 padding: 0 0.35rem;}
 .rec-song-list > div:nth-child(1) > span > svg{ font-size: 0.56rem;
