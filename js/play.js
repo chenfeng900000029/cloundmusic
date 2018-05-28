@@ -1,12 +1,17 @@
 $(function() {
 let id=parseInt( location.search.match(/\bid=([^&]*)/)[1],10)
-// console.log(id)
+ //console.log(id)
 $.get('song.json').then(function(response){
 	let songs=response
 	let song=songs.filter((s)=>{return s.id===id})[0]
 	let {url}=song
 	let {img}=song
-	console.log(img)
+	console.log(response.length)
+	
+	
+	
+	
+	
 	let audio=document.createElement('audio')
 		//audio.autoplay='autoplay'  自动播放  手机无效
 		audio.src=url
@@ -27,7 +32,29 @@ $.get('song.json').then(function(response){
 			$('.disc').addClass('playing')
 		})
 		let imgs =$('#coverimg').attr('src',img)
-		console.log(imgs)
+		//console.log(imgs)
+		
+		$('#nextsong').on('click',function(){
+			let nextsong=id+=1
+			if(nextsong>response.length){
+				nextsong=1
+			}
+			window.location.href="?id="+nextsong
+		})
+		$('#lastsong').on('click',function(){
+			let nextsong=id-1
+			if(nextsong<1){
+				nextsong=4
+			}
+			window.location.href="?id="+nextsong
+		})
+		
+		$('#back').on('click',function(){
+			window.history.back();
+		
+		})
+	
+
 
 })
 
